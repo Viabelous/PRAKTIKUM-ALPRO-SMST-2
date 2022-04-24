@@ -861,19 +861,17 @@ void properEditMenu(dataPengunjung struk[], int index){
 				getch()										;}
 			
 			else if (struk[kamarLain].nama != ""){
-				palette("Merah")							  ;
-			   cout << "\t\t Kamar Sedang Ditempati" << endl  ;
-				palette("")									  ;
+			   ccout ("Merah","\t\t Kamar Sedang Ditempati")  ;
 			   cout << " Tukar Kamar? (y/n)" 		 << endl  ;
 			   opsi = getch()								  ;
-			   opsi = (opsi == 'y' || opsi == 'Y') ? '3' : 'n';
-			   if (opsi == '3'){
+			   opsi = (opsi == 'y' || opsi == 'Y') ? '0' : 'n';
+			   if (opsi == '0'){
 				pindahKamar(struk, index, kamarLain)		  ;
 			   }}
 				
 			else{
-				pindahKamar(struk, index, kamarLain)		;
-				opsi = '3'									;}
+				opsi = '0'									;
+				pindahKamar(struk, index, kamarLain)		;}
 				
 			break											;
 		
